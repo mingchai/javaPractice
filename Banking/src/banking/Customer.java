@@ -41,5 +41,11 @@ public class Customer {
     return this.name;
   }
 
-
+  /**
+   * Returns the customer's address as a string
+   * @return the customer's address
+   */
+  public String getAddress(){
+    return this.address;
+  }
 }
