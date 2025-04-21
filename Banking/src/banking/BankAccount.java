@@ -30,4 +30,24 @@ public class BankAccount {
     this.customer = customer;
 
   }
+
+  // Methods
+  /**
+   * Adds the specified amount to the account's balance
+   * @param amount
+   */
+  public void deposit(double amount){
+    this.balance += amount;
+  }
+  /**
+   * Deducts the specified amount from the account's balance
+   * @param amount to be withdrawn
+   * @throws Exception if the amount to be withdrawn is greater than the available balance
+   */
+  public void withdraw(double amount) throws Exception{
+    if(amount > this.balance){
+      throw new Exception("Amount is greater than the available balance");
+    }
+    this.balance -= amount;
+  }
 }
