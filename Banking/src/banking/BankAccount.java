@@ -63,7 +63,7 @@ public class BankAccount {
    * Get the customer's name and address
    * @return the customer name and address as a string
    */
-  public String getCustomerName(){
+  public String getCustomerInfo(){
     return this.customer.getName() + ": " + this.customer.getAddress();
   }
 }
