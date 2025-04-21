@@ -50,4 +50,20 @@ public class BankAccount {
     }
     this.balance -= amount;
   }
+
+  /**
+   * Get the account type and balance
+   * @return the account type and balance as a string
+   */
+  public String getAccountInfo(){
+    return this.accountType + ": " + this.balance;
+  }
+
+  /**
+   * Get the customer's name and address
+   * @return the customer name and address as a string
+   */
+  public String getCustomerName(){
+    return this.customer.getName() + ": " + this.customer.getAddress();
+  }
 }
