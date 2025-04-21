@@ -19,4 +19,15 @@ public class BankAccount {
    */
   Customer customer;
 
+  // Constructor
+  /**
+   * Creates the given account type for the given customer
+   * @param accountType for bank account
+   * @param customer for bank account
+   */
+  public BankAccount(String accountType, Customer customer){
+    this.accountType = accountType;
+    this.customer = customer;
+
+  }
 }
