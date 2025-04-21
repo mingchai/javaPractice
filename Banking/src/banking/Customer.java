@@ -32,4 +32,14 @@ public class Customer {
   public void setAddress(String address){
     this.address = address;
   }
+
+  /**
+   * Retrieves the customer's name
+   * @return the name of the customer as a String
+   */
+  public String getName(){
+    return this.name;
+  }
+
+
 }
