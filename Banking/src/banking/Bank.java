@@ -39,5 +39,11 @@ public class Bank {
     BankAccount account = new BankAccount(accountType, customer);
     System.out.println(account.getAccountInfo());
     System.out.println(account.getCustomerInfo());
+
+    System.out.println("How much would you like to deposit into your account today?");
+    double depositAmount = scanner.nextDouble();
+    account.deposit(depositAmount);
+    System.out.println(depositAmount + " deposited.");
+    System.out.println("Here is your updated account info: " + account.getAccountInfo());
   }
 }
