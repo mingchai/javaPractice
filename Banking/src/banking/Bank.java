@@ -1,5 +1,7 @@
 package banking;
 
+import java.util.Scanner;
+
 /**
  * Represents a bank for managing customers and their bank accounts.
  * @author Ming Chai
@@ -11,6 +13,31 @@ public class Bank {
   }
 
   private void run() {
-    System.out.println("Program is running");
+    System.out.println("Program is running...");
+
+    /**
+     * Gets the customer's name
+     */
+    System.out.println("Welcome to the bank. Please provide your name: ");
+    Scanner scanner = new Scanner(System.in);
+    String name = scanner.next();
+    
+    /**
+     * Get the customer's address
+     */
+    System.out.println("Nice to meet you, " + name + "! To continue, please provide your address: ");
+    String address = scanner.next();
+    
+    /**
+     * Create a new customer
+     */
+    Customer customer = new Customer(name);
+    customer.setAddress(address);
+
+    System.out.println("Thank you. What type of account are you setting up today?");
+    String accountType = scanner.next();
+    BankAccount account = new BankAccount(accountType, customer);
+    System.out.println(account.getAccountInfo());
+    System.out.println(account.getCustomerInfo());
   }
 }
