@@ -46,7 +46,7 @@ public class BankAccount {
    */
   public void withdraw(double amount) throws Exception{
     if(amount > this.balance){
-      throw new Exception("Amount is greater than the available balance");
+      throw new Exception("Requested amount is greater than the available balance");
     }
     this.balance -= amount;
   }

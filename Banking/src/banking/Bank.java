@@ -45,5 +45,19 @@ public class Bank {
     account.deposit(depositAmount);
     System.out.println(depositAmount + " deposited.");
     System.out.println("Here is your updated account info: " + account.getAccountInfo());
+
+    System.out.println("\nHow much would you like to withdraw from your account today?");
+    double withdrawalAmount = scanner.nextDouble();
+    try {
+      account.withdraw(withdrawalAmount);
+      System.out.println(withdrawalAmount + " withdrawn.");
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+    System.out.println("Here is your updated account info: " + account.getAccountInfo());
+    System.out.println("Here is your updated customer info: " + account.getCustomerInfo());
+    System.out.println("Thank you for banking with us, " + customer.getName() + "!");
+    System.out.println("Have a great day!");
+    scanner.close();
   }
 }
