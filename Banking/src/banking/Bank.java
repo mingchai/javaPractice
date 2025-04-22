@@ -55,7 +55,6 @@ public class Bank {
       System.out.println(e.getMessage());
     }
     System.out.println("Here is your updated account info: " + account.getAccountInfo());
-    System.out.println("Here is your updated customer info: " + account.getCustomerInfo());
     System.out.println("Thank you for banking with us, " + customer.getName() + "!");
     System.out.println("Have a great day!");
     scanner.close();
